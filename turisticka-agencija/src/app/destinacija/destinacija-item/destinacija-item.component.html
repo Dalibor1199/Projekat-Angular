@@ -1,0 +1,13 @@
+<div class="dest-container" style="margin-top: 10%;">
+    <div><img [src]="dest.slika" width="250px" height="250px"></div>
+    <div style="background-color: white; width: 250px; height: auto; margin-left: 11%;">
+    <div>{{dest.naziv}}</div>
+    <div>Datum polaska: {{date | date:'MM/dd/yyyy'}}</div>
+    <div>Cena nocenja od {{dest.cena}}$</div>
+    </div>
+    <div><a href="/add-rezervacija?dest={{dest.naziv}}&cena={{dest.cena}}"><button class="btn btn-primary" *ngIf="isLogIn">Rezervisi</button></a></div>
+    <div>
+        <span style="margin: 2%;"><a href="/update-destinacija?naziv={{dest.naziv}}"><button  class="btn btn-primary" *ngIf="adminLogin">Azuriraj</button></a></span>
+        <span style="margin: 2%;"><button (click)="deleteDest()" class="btn btn-danger" *ngIf="adminLogin">Ukloni</button></span>
+    </div>
+</div>

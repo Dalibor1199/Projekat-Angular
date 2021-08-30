@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="center">
+        <form (ngSubmit)="addDest(destForm)" #destForm="ngForm">
+            <div>
+                <label>Naziv</label>
+                 <input class="form-control" type="text" name="naziv" #naziv="ngModel" required  [(ngModel)]="dest.naziv"/>
+            </div>
+            <div class="err" *ngIf="naziv.invalid && naziv.dirty">
+                Morate uneti naziv.
+            </div>
+            <div>
+                <label>Cena po nocenju</label>
+                 <input class="form-control" type="number" name="cena" #cena="ngModel" required [(ngModel)]="dest.cena"/>
+            </div>
+            <div class="err" *ngIf="cena.invalid && cena.dirty">
+                Morate uneti cenu.
+            </div>
+            <div>
+                <label>Datum polaska</label>
+                 <input class="form-control" type="date" name="datum" #datum="ngModel" required [(ngModel)]="dest.datum"/>
+            </div>
+            <div class="err" *ngIf="datum.invalid && datum.dirty">
+                Niste izabrali datum.
+            </div>
+            <div>
+                <label>Slika URL</label>
+                 <input class="form-control" type="text" name="slika" #slika="ngModel" required
+                  pattern="http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$" [(ngModel)]="dest.slika"/>
+            </div>
+            <div class="err" *ngIf="slika.invalid && slika.dirty">
+                <div *ngIf="slika.errors.required">
+                    Slika destinacije je obavezna!
+                </div>
+                <div *ngIf="slika.errors.pattern">
+                    Slika se ne poklapa sa paternom.
+                </div>
+            </div>
+            <div>
+                <button style="margin-top: 2%;" type="submit" class="btn btn-primary">Dodaj</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

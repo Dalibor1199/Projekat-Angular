@@ -1,0 +1,20 @@
+<h1 style="text-align: center;">Welcome to Euro Tours</h1>
+<div class="container">
+<form (ngSubmit)="updateDests()">
+    <div class="row">
+        <div class="col-md 3">
+            Gde zelite da putujete? <input type="text" class="form-control" name="naziv" [(ngModel)]="naziv" />
+        </div>
+        <div class="col-md 3">
+            Cena do: <input type="number" class="form-control" name="cena" [(ngModel)]="cena" />
+        </div>
+        <div class="col-md 3">
+            Datum: <input type="date" class="form-control" name="date" [(ngModel)]="date" />
+        </div>
+        <div class="col-md 3">
+            <button style="margin-top: 8%;" class="btn btn-primary" type="submit">Pretrazi</button>
+        </div>
+    </div>
+</form>
+</div>
+<app-destinacija-item [dest]="dest" *ngFor="let dest of dests$ | async"></app-destinacija-item>

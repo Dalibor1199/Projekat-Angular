@@ -1,0 +1,51 @@
+
+<div class="container">
+    <div class="center">
+        <h2>Sign Up</h2>
+
+        <form #form="ngForm" (ngSubmit)="register(form)">
+            <div>
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" required #imeK="ngModel" name="ime" [(ngModel)]="korisnik.ime">
+            </div>
+            <div class="err" *ngIf="imeK.invalid && imeK.dirty">
+                 Name is mandatory!
+            </div>
+            <div>
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" required #prezimeK="ngModel" name="prezime"
+                    [(ngModel)]="korisnik.prezime">
+            </div>
+            <div class="err" *ngIf="prezimeK.invalid && prezimeK.dirty">
+                Last name is mandatory!
+           </div>
+            <div>
+                <label for="validationCustomUsername" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control" required #korisnickoIme="ngModel" name="username" [(ngModel)]="korisnik.username">
+                </div>
+            </div>
+            <div class="err" *ngIf="korisnickoIme.invalid && korisnickoIme.dirty">
+                Username is mandatory!
+           </div>
+            <div>
+                <label for="validationCustomUsername" class="form-label">Password</label>
+                <input type="password" class="form-control" required #lozinka="ngModel" name="password" [(ngModel)]="korisnik.password">
+
+            </div>
+            <div class="err" *ngIf="lozinka.invalid && lozinka.dirty">
+                Password is mandatory!
+           </div>
+            <div>
+                <label for="validationCustom03" class="form-label">Phone number</label>
+                <input type="text" class="form-control" id="validationCustom03" required name="brMob" [(ngModel)]="korisnik.brMob">
+                <div class="invalid-feedback">
+                    Please input a phone number.
+                </div>
+            </div>
+            <div class="col-12">
+                <button style="margin-top: 2%;" class="btn btn-primary" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
