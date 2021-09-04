@@ -30,4 +30,14 @@ export class UserService {
     }
     )
   }
+
+  getUsers(): Observable<Korisnik[]> {
+    return this.http.get<Korisnik[]>(this.BACKAND_BASE+"sviKorisnici");
+  }
+
+  deleteUser(username: string):Observable<any> {
+    let params=new HttpParams().set("username", username);
+
+    return this.http.post(this.BACKAND_BASE+"deleteKorisnik", params);
+  }
 }

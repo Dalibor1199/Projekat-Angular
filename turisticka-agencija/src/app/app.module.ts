@@ -15,6 +15,7 @@ import { AddRezervacijaComponent } from './rezervacija/add-rezervacija/add-rezer
 import { AddDestinacijaComponent } from './destinacija/add-destinacija/add-destinacija.component';
 import { UpdateDestinacijaComponent } from './destinacija/update-destinacija/update-destinacija.component';
 import { TokenInterceptor } from './services/tokenInterceptor';
+import { PrikazKorisnikaComponent } from './korisnik/prikaz-korisnika/prikaz-korisnika.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TokenInterceptor } from './services/tokenInterceptor';
     DestinacijaListComponent,
     AddRezervacijaComponent,
     AddDestinacijaComponent,
-    UpdateDestinacijaComponent,    
+    UpdateDestinacijaComponent,
+    PrikazKorisnikaComponent,    
   ],
   imports: [
     BrowserModule,

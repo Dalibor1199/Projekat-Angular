@@ -27,6 +27,7 @@ export class AppComponent {
     else {
       localStorage.removeItem("admin")
     }
-    window.location.reload();
+    this.router.navigate(["/destinacije"]).then(()=>
+    window.location.reload())
   }
 }

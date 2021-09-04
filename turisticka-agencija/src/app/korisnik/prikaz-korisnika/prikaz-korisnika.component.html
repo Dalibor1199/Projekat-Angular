@@ -1,0 +1,23 @@
+<div class="container">
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <td>Ime</td>
+                <td>Prezime</td>
+                <td>Username</td>
+                <td>Broj telefona</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let k of korisnici">
+                <td>{{k.ime}}</td>
+                <td>{{k.prezime}}</td>
+                <td>{{k.username}}</td>
+                <td>{{k.brMob}}</td>
+                <td><button (click)="deleteKorisnik(k)" class="btn btn-danger">Ukloni</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,25 +1,25 @@
 <div class="image">
+        <nav>
+                <div style="text-align: center;" class="links">
+                        <span style="margin: 2%;"><a class="link-primary" routerLink="/destinacije"
+                                        routerLinkActive="active">Pocetna</a></span>
+                        <span style="margin: 2%;"><a class="link-primary" routerLink="/login"
+                                        routerLinkActive="active">Login</a></span>
+                        <span style="margin: 2%;"><a class="link-primary" routerLink="/register"
+                                        routerLinkActive="active">Register</a></span>
+                        <span *ngIf="admin" style="margin: 2%;"><a class="link-primary" routerLink="/add-destinacija"
+                                        routerLinkActive="active">Dodajte Destinaciju</a></span>
+                        <span *ngIf="admin" style="margin: 2%;"><a class="link-primary" routerLink="/prikaz-korisnika"
+                                        routerLinkActive="active">Prikaz korisnika</a></span>
+                        <span><button *ngIf="isLogIn" (click)="removeToken()" style="margin-left: 93%"
+                                        class="btn btn-outline-primary">Log Out</button></span>
+                </div>
+        </nav>
+        <hr>
 
-<div class="container">
-
-    <div class="links">
-        <span style="margin: 2%;"><a class="link-primary" routerLink="/destinacije" routerLinkActive="active">Pocetna</a></span>
-
-        <span style="margin: 2%;"><a class="link-primary" routerLink="/login" routerLinkActive="active">Login</a></span>
-        <span style="margin: 2%;"><a class="link-primary"  routerLink="/register" routerLinkActive="active">Register</a></span>
-        <span *ngIf="admin" style="margin: 2%;"><a class="link-primary"  routerLink="/add-destinacija" routerLinkActive="active">Dodajte Destinaciju</a></span>
-
-        <span><button *ngIf="isLogIn" (click)="removeToken()" style="margin-left: 93%" class="btn btn-outline-primary">Log Out</button></span>
-
-    </div>
-
-
-</div>
-<hr>
-<div class="container">
-    <!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
-    <router-outlet></router-outlet>
-</div>
+        <div class="container">
+                <router-outlet></router-outlet>
+        </div>
 
 
 

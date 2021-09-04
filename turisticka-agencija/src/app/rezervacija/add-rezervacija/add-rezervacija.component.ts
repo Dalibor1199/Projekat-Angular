@@ -73,8 +73,8 @@ else {
     this.rezervacijaService.addRezervacija(this.username, this.transport, this.smestaj, this.dest, this.cena)
     .subscribe(resp => {
       if (resp!=null) {
-        alert("Rezervacija uspesna! Ukupna cena: "+ this.cena)
-        console.log("Uspesno izvrsena rezervacija", this.deca, this.cenaPoNocenju)
+        alert("Rezervacija uspesna! Ukupna cena: "+ this.cena+"$")
+        console.log("Uspesno izvrsena rezervacija", this.deca, this.cenaPoNocenju+"$")
         this.router.navigate(['/destinacije']);
       }
     })

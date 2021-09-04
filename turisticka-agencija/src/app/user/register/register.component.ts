@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit {
         alert("Vec postoji neko sa tim username-om")
       }
       else {
+        alert("Uspesno ste se registrovali");
         this.router.navigate(['/login'])
       }
     

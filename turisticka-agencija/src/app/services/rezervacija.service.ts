@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Rezervacija } from '../model/rezervacija';
 import { Smestaj } from '../model/smestaj';
 import { Transport } from '../model/transport';
 
@@ -35,5 +36,12 @@ export class RezervacijaService {
       return this.http.post(this.BACKAND_BASE+"saveRezervacija", params, { 
       headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
     })
+  }
+
+  getRezervacijeKorisnik(username: string): Observable<Rezervacija[]> {
+    let params=new HttpParams()
+    .set("username", username);
+
+    return this.http.post<Rezervacija[]>(this.BACKAND_BASE + "rezervacijeKorisnika", username)
   }
 }

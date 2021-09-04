@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Destinacija } from 'src/app/model/destinacija';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DestService } from 'src/app/services/dest.service';
 
 @Component({
@@ -16,7 +15,7 @@ export class UpdateDestinacijaComponent implements OnInit {
   public slika: string="";
 
 
-  constructor(private destService:DestService, private route: ActivatedRoute) { }
+  constructor(private destService:DestService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -28,6 +27,7 @@ export class UpdateDestinacijaComponent implements OnInit {
     this.destService.updateDest(this.naziv, this.cena, this.datum, this.slika).subscribe(resp => {
       if (resp==true) {
       console.log("Azuriranje uspesno");
+      this.router.navigate(['/destinacije']);
       }
       else {
         alert("Azuriranje neuspesno")

@@ -4,7 +4,7 @@ import { Smestaj } from "./smestaj";
 import { Transport } from "./transport";
 
 export class Rezervacija {
-
+    public id: number;
     public smestaj: Smestaj;
     public transport: Transport;
     public destinacija: Destinacija;

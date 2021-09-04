@@ -34,6 +34,7 @@ public class Korisnik implements Serializable {
 	//bi-directional many-to-one association to Uloga
 	@ManyToOne
 	@JoinColumn(name="Uloga_idUloga")
+	@JsonIgnore
 	private Uloga uloga;
 
 
