@@ -1,9 +1,10 @@
 
 
 .image{
-  height:80em; background-size:cover; width:auto;
+  height: 69em; background-size:cover; width:auto;
   background-image:url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-weekend-travel-poster-background-image_144038.jpg');
   background-position:50% 50%;
+  overflow-y: auto;
 }
 
 
