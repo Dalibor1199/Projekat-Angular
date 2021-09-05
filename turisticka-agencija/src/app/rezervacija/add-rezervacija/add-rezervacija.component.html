@@ -20,7 +20,7 @@
                 </tr>
                 <tr>
                     <td>Tip prevoza</td>
-                    <td><select class="form-select" [(ngModel)]="transport" name="transport">
+                    <td><select class="form-select" [(ngModel)]="transport" name="transport" required>
                             <option *ngFor="let t of transports" [(ngValue)]="t.opisTransporta">{{t.opisTransporta}}
                             </option>
                         </select></td>
@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>Tip smestaja</td>
-                    <td><select class="form-select" [(ngModel)]="smestaj" name="smestaj">
+                    <td><select class="form-select" [(ngModel)]="smestaj" name="smestaj" required>
                             <option *ngFor="let s of smestajs" [(ngValue)]="s.opisSmestaja">{{s.opisSmestaja}}</option>
                         </select></td>
                     <td>Za apartman se doplacuje jos 10% od ukupne cene.</td>

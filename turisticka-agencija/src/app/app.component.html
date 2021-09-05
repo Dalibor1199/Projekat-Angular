@@ -11,8 +11,12 @@
                                         routerLinkActive="active">Dodajte Destinaciju</a></span>
                         <span *ngIf="admin" style="margin: 2%;"><a class="link-primary" routerLink="/prikaz-korisnika"
                                         routerLinkActive="active">Prikaz korisnika</a></span>
+                        <span style="margin: 2%;"><a class="link-primary" routerLink="/o-nama"
+                                        routerLinkActive="active">O nama</a></span>
                         <span><button *ngIf="isLogIn" (click)="removeToken()" style="margin-left: 93%"
                                         class="btn btn-outline-primary">Log Out</button></span>
+
+
                 </div>
         </nav>
         <hr>

@@ -5,6 +5,7 @@ import { DestinacijaListComponent } from './destinacija/destinacija-list/destina
 import { UpdateDestinacijaComponent } from './destinacija/update-destinacija/update-destinacija.component';
 import { AuthGuard } from './gurads/authGuard';
 import { PrikazKorisnikaComponent } from './korisnik/prikaz-korisnika/prikaz-korisnika.component';
+import { ONamaComponent } from './osnovneStranice/onama/onama.component';
 import { AddRezervacijaComponent } from './rezervacija/add-rezervacija/add-rezervacija.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
@@ -16,7 +17,8 @@ const routes: Routes = [{path:'', redirectTo:'/destinacije', pathMatch:'full'},
                         {path:'add-rezervacija', component:AddRezervacijaComponent},
                         {path:'add-destinacija', component:AddDestinacijaComponent},
                         {path:'update-destinacija', component:UpdateDestinacijaComponent},
-                        {path: 'prikaz-korisnika', component:PrikazKorisnikaComponent}];
+                        {path: 'prikaz-korisnika', component:PrikazKorisnikaComponent},
+                        {path: 'o-nama', component:ONamaComponent}];
                        // {path:'**', component: RegisterComponent}];
 
 @NgModule({

@@ -51,8 +51,8 @@ export class AddRezervacijaComponent implements OnInit {
   }
 
  addRezervacija() {
-  if (this.brojDana==0) {
-    alert("Invalid form")
+  if (this.brojDana==0 || this.transport=="" || this.smestaj=="") {
+    alert("Invalid form!")
   }
 
 else {
@@ -74,7 +74,6 @@ else {
     .subscribe(resp => {
       if (resp!=null) {
         alert("Rezervacija uspesna! Ukupna cena: "+ this.cena+"$")
-        console.log("Uspesno izvrsena rezervacija", this.deca, this.cenaPoNocenju+"$")
         this.router.navigate(['/destinacije']);
       }
     })
